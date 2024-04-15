@@ -1,0 +1,22 @@
+{
+  "name": "lite-breakpoints",
+  "version": "0.0.4",
+  "description": "Lightweight library that simplifies working with media queries to create adaptability on the site.",
+  "keywords": [
+    "scss",
+    "variables",
+    "mixins",
+    "adaptive",
+    "breakpoints",
+    "adaptability"
+  ],
+  "main": "index.scss",
+  "scripts": {
+    "build": "sass index.scss dist/style.css"
+  },
+  "author": "efgor",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.75.0"
+  }
+}

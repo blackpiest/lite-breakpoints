@@ -1,0 +1,49 @@
+@function get-min($name, $breakpoint-list) {
+  $min: map-get($breakpoint-list, $name);
+  @return if($min !=0, $min, null);
+}
+
+@function get-max($name, $breakpoint-list) {
+  $max: map-get($breakpoint-list, $name);
+  @return if($max and $max > 0, $max - .02, null);
+}
+
+@mixin breakpoint-up($breakpoint) {
+  @if variable-exists('lite-breakpoints') {
+    $min-width: get-min($breakpoint, $lite-breakpoints);
+
+    @if $min-width {
+      @media (min-width: $min-width) {
+        @content;
+      }
+    }
+
+    @else {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Variable $lite-breakpoints not defined.";
+  }
+}
+
+@mixin breakpoint-down($breakpoint) {
+  @if variable-exists('lite-breakpoints') {
+    $max-width: get-max($breakpoint, $lite-breakpoints);
+
+    @if $max-width {
+      @media (max-width: $max-width) {
+        @content;
+      }
+    }
+
+    @else {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Variable $lite-breakpoints not defined.";
+  }
+}
