@@ -1,6 +1,6 @@
 {
   "name": "lite-breakpoints",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Lightweight library that simplifies working with media queries to create adaptability on the site.",
   "keywords": [
     "scss",
@@ -18,5 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "sass": "^1.75.0"
-  }
+  },
+  "repository": "https://github.com/blackpiest/lite-breakpoints",
+  "homepage": "https://github.com/blackpiest/lite-breakpoints#readme"
 }
