@@ -1,4 +1,5 @@
 # lite-breakpoints
+[![npm](https://img.shields.io/npm/v/lite-breakpoints)](https://www.npmjs.com/package/lite-breakpoints)
 This is a very small and lightweight library that simplifies working with media queries to create adaptability on the site. 
 
 ## Install
