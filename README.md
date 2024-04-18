@@ -16,6 +16,7 @@ This is a very small and lightweight library that simplifies working with media 
 ## Usage
 **WARNING**: You need to initialize the global variable **$lite-variables** in order to set breakpoints for your project. After that, you need to import the library itself into a scss file.
 ```scss
+// breakpoints.scss
 $lite-breakpoints:(xs: 0,
   sm: 375px,
   md: 560px,
@@ -27,6 +28,9 @@ $lite-breakpoints:(xs: 0,
 ```
 That's all! Now you can use convenient mixins for adaptivity in your projects. Good luck!
 ```scss
+// another-file.scss
+@import '@path/to/breakpoints';
+
 .text {
   @include breakpoint-up(lg) {
     color: red;
